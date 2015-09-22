@@ -443,6 +443,7 @@ Polymer(Polymer.mixin({
             if (model.record) { row = model.record.row; }
             this.toggleRowFromSelected(row);
         }
+        this.stopPropagation(e);
     },
     updateColumnWidths: function (e, p) {
         var columns = this.shadowRoot.querySelectorAll('thead > tr > th');
